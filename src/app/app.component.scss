@@ -1,0 +1,15 @@
+.app-body {
+    padding-top: 130px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    .content {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 830px;
+    }
+  }

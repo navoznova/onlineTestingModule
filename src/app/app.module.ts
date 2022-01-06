@@ -1,7 +1,7 @@
-import { RightSideBarComponent } from './rightSideBar/rightSideBar.component';
+import { RightSideBarComponent } from './main/rightSideBar/rightSideBar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { LeftSideBarComponent } from './leftSideBar/leftSideBar.component';
+import { LeftSideBarComponent } from './main/leftSideBar/leftSideBar.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
