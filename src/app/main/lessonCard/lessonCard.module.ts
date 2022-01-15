@@ -7,6 +7,9 @@ import { AuthorComponent } from './author/author.component';
 
 @NgModule({
   declarations: [
+    AuthorComponent,
+  ],
+  exports: [
     AuthorComponent
   ],
   imports: [
