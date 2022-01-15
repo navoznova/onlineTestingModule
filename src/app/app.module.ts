@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { MainComponent } from './main/main.component';
+import { LessonCardComponent } from './main/lessonCard/lessonCard.component';
+import { LessonCardModule } from './main/lessonCard/lessonCard.module';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { MainComponent } from './main/main.component';
     FooterComponent,
     LeftSideBarComponent,
     RightSideBarComponent,
-    MainComponent
+    MainComponent,
+    LessonCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    LessonCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

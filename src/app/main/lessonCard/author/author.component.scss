@@ -1,0 +1,44 @@
+.author {
+    display: flex;
+    justify-content: left;
+
+    .author-img {
+        background: #0c0c0c;
+        margin-right: 10px;
+    }
+
+    .name {
+        position: absolute;
+        left: 24.14%;
+        right: 64.42%;
+        top: 4.1%;
+        bottom: 95.54%;
+
+        font-family: SF Pro Display;
+        font-size: 14px;
+        line-height: 100%;
+
+        display: flex;
+        align-items: center;
+
+        color: #0c6495;
+    }
+
+    .time {
+        position: absolute;
+        left: 24.14%;
+        right: 64.42%;
+        top: 4.68%;
+        bottom: 94.96%;
+
+        font-family: SF Pro Display;
+        font-size: 14px;
+        line-height: 100%;
+        /* or 14px */
+
+        display: flex;
+        align-items: center;
+
+        color: #999999;
+    }
+}
