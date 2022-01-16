@@ -9,4 +9,5 @@ import { LessonCardComponent } from "../lessonCard.component";
 
 export class DescriptionComponent {
     @Input() title = '';
+    @Input() description = '';
 }
