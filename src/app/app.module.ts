@@ -12,6 +12,7 @@ import { ServerComponent } from './server/server.component';
 import { MainComponent } from './main/main.component';
 import { LessonCardComponent } from './main/lessonCard/lessonCard.component';
 import { LessonCardModule } from './main/lessonCard/lessonCard.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LessonCardModule } from './main/lessonCard/lessonCard.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    LessonCardModule
+    LessonCardModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
