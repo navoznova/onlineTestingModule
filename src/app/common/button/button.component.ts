@@ -9,13 +9,6 @@ export class ButtonComponent {
 	@Input()
 	public label: string = '';
 
-	@Output()
-	public onClick = new EventEmitter<any>();
-
 	constructor() { }
-
-	onClickButton(event: any) {
-		this.onClick.emit(event);
-	}
 }
 
