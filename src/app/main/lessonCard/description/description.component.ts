@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { LessonCardComponent } from "../lessonCard.component";
 
 @Component({
     selector: 'app-description',
@@ -8,6 +7,12 @@ import { LessonCardComponent } from "../lessonCard.component";
 })
 
 export class DescriptionComponent {
-    @Input() title = '';
-    @Input() description = '';
+    @Input() title: string = '';
+    @Input() description: string = '';
+
+    constructor() { }
+
+    functioncall(event: any) {
+        console.log('functioncall', event);
+    }
 }

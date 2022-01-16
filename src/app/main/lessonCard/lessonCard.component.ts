@@ -7,14 +7,20 @@ import { HttpClient } from '@angular/common/http';
     styleUrls: ['./lessonCard.component.scss']
 })
 
-export class LessonCardComponent implements OnInit{
+export class LessonCardComponent implements OnInit {
     lessonTitle: string = '';
     lessonDescription: string = '';
 
+    buttonLabel: string = 'Just a button';
+
     constructor(private http: HttpClient) { }
+
+    doSomething() {
+        console.log("click");
+    }
     
     ngOnInit(): void {
-        const getLessonUrl: string = 'https://b.onclass.tech/web/content/slug/Vx2YUK5pg2d0?full=1'; 
+        const getLessonUrl: string = 'https://b.onclass.tech/web/content/slug/Vx2YUK5pg2d0?full=1';
         this.http.get<LessonResponseModel>(getLessonUrl)
             .subscribe(lesson => {
                 console.log(`title = ${lesson.title}`);
@@ -32,7 +38,7 @@ class LessonResponseModel {
     author: Author | undefined;
 }
 
-class Author{
+class Author {
     first_name: string | undefined;
-    last_name: string | undefined;    
+    last_name: string | undefined;
 }

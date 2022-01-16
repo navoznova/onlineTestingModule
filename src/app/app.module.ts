@@ -13,8 +13,7 @@ import { MainComponent } from './main/main.component';
 import { LessonCardComponent } from './main/lessonCard/lessonCard.component';
 import { LessonCardModule } from './main/lessonCard/lessonCard.module';
 import { HttpClientModule } from '@angular/common/http';
-import { TabsComponent } from './common/tabs/tabs.component';
-//import { MatTabsModule } from '@angular/material/tabs';
+import { ButtonComponent } from './common/button/button.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,7 @@ import { TabsComponent } from './common/tabs/tabs.component';
     RightSideBarComponent,
     MainComponent,
     LessonCardComponent,
-    TabsComponent
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +33,6 @@ import { TabsComponent } from './common/tabs/tabs.component';
     FormsModule,
     LessonCardModule,
     HttpClientModule,
-    //MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

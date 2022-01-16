@@ -7,4 +7,11 @@ import { Component } from "@angular/core";
 })
 
 export class MainComponent {
+	label: string = "RandomButtonLabel"
+
+	constructor() { }
+
+	functioncall(event: any) {
+		console.log('functioncall', event);
+	}
 }
