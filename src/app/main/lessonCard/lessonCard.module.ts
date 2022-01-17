@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AuthorComponent } from './author/author.component';
-import { DescriptionComponent } from './description/description.component';
+import { HeadComponent } from './head/head.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
     AuthorComponent,
-    DescriptionComponent,
+    HeadComponent,
     StatisticsComponent,
     CommentsComponent
   ],
   exports: [
     AuthorComponent,
-    DescriptionComponent,
+    HeadComponent,
     StatisticsComponent,
     CommentsComponent,
   ],

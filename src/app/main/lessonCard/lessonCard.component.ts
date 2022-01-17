@@ -9,13 +9,12 @@ import { HttpClient } from '@angular/common/http';
 
 export class LessonCardComponent implements OnInit {
     lessonTitle: string = '';
-    lessonDescription: string = '';
 
     buttonLabel: string = 'Начать урок';
 
     tabsTitles: string[] = ["Один", "два2", "Три три",]
-    tabsContents: string[] = ["Один контент", "два2 контент", "Три три контент",]
-    
+    tabsContents: string[] = ["No content", "два2 контент", "Три три контент",]
+
     constructor(private http: HttpClient) { }
 
     doSomething() {
@@ -30,7 +29,7 @@ export class LessonCardComponent implements OnInit {
                 console.log(`first_name = ${lesson.author?.first_name}`);
 
                 this.lessonTitle = lesson.title || '';
-                this.lessonDescription = lesson.description || '';
+                this.tabsContents[0] = lesson.description || '';
             });
     }
 }
