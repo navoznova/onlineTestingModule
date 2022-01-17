@@ -11,7 +11,7 @@ export class LessonCardComponent implements OnInit {
     lessonTitle: string = '';
     lessonDescription: string = '';
 
-    buttonLabel: string = 'Just a button';
+    buttonLabel: string = 'Начать урок';
 
     constructor(private http: HttpClient) { }
 
