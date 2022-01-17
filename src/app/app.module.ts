@@ -14,6 +14,7 @@ import { LessonCardComponent } from './main/lessonCard/lessonCard.component';
 import { LessonCardModule } from './main/lessonCard/lessonCard.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonComponent } from './common/button/button.component';
+import { TabsComponent } from './common/tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ButtonComponent } from './common/button/button.component';
     MainComponent,
     LessonCardComponent,
     ButtonComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
