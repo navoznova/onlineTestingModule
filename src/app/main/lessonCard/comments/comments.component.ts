@@ -12,6 +12,7 @@ export class CommentsComponent implements OnInit {
 	lessonId: string = '';
 
 	comments: CommentViewModel[] = [];
+	newComment: string = '';
 
 	constructor(private http: HttpClient) { }
 
@@ -28,6 +29,15 @@ export class CommentsComponent implements OnInit {
 			
 			this.comments = response.first?.map(comment => new CommentViewModel(comment.id, comment.text)) || [];
 		});
+	}
+
+	public addComment() {
+		// хардкод. тут надо отправлять запрос на сервер для сохранения нового комментария. а в ответ получать идентификатор этого комментаря.
+		const commentId = "";
+
+		let comment = new CommentViewModel(commentId, this.newComment);
+		this.comments.push(comment);
+		this.newComment = '';
 	}
 }
 
