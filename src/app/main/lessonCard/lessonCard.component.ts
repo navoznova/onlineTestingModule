@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input, Output } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,8 +8,9 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class LessonCardComponent implements OnInit {
-    lessonTitle: string = '';
+    lessonId: string = '';
 
+    lessonTitle: string = '';
     buttonLabel: string = 'Начать урок';
 
     tabsTitles: string[] = ["Один", "два2", "Три три",]
@@ -27,7 +28,8 @@ export class LessonCardComponent implements OnInit {
             .subscribe(lesson => {
                 console.log(`title = ${lesson.title}`);
                 console.log(`first_name = ${lesson.author?.first_name}`);
-
+                
+                this.lessonId = lesson.id || '';
                 this.lessonTitle = lesson.title || '';
                 this.tabsContents[0] = lesson.description || '';
             });
@@ -35,6 +37,7 @@ export class LessonCardComponent implements OnInit {
 }
 
 class LessonResponseModel {
+    id: string | undefined;
     title: string | undefined;
     description: string | undefined;
     author: Author | undefined;
