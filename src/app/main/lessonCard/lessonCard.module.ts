@@ -6,6 +6,7 @@ import { AuthorComponent } from './author/author.component';
 import { HeadComponent } from './head/head.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CommentsComponent } from './comments/comments.component';
+import { StatisticsModule } from './statistics/statistics.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CommentsComponent } from './comments/comments.component';
   imports: [
     BrowserModule,
     FormsModule,
+    StatisticsModule,
   ],
   providers: [],
 })

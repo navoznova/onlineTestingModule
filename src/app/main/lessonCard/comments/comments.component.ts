@@ -27,7 +27,6 @@ export class CommentsComponent implements OnInit {
 			console.log(`text = ${response.first?.[0]?.text}`);
 			
 			this.comments = response.first?.map(comment => new CommentViewModel(comment.id, comment.text)) || [];
-
 		});
 	}
 }
