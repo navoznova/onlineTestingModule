@@ -1,5 +1,7 @@
 <div class="author">
-    <div class="author-img"></div>
-    <div class="name">Anna Dormund</div>
-    <div class="time">14:55 pm</div>
+    <div class="author-img">
+        <img [attr.src]="model?.picUrl" alt="author avatar" />
+    </div>
+    <div class="name">{{ model?.firstName }} {{ model?.lastName}}</div>
+    <div class="time">{{ formatToAmPmTime(model?.publishedAt) }}</div>
 </div>
