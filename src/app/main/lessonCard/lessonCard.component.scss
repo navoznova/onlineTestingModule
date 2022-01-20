@@ -8,7 +8,7 @@
     border-radius: 10px;
 }
 
-.lesson-content{
+.lesson-content {
     margin: 30px;
 }
 
@@ -64,4 +64,45 @@
 
         color: #5f6d7a;
     }
+
+    .buttons-row {
+        display: flex;
+        margin-top: 14px;
+    }
+
+    .tabs ul {
+        display: flex;
+    }
+
+    .tab {
+        padding: 0 20px;
+
+        font-family: SF Pro Display;
+        font-size: 14px;
+        line-height: 100%;
+        /* or 14px */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #41a1d9;
+
+        cursor: pointer;
+    }
+
+    .line {
+        width: 340px;
+        height: 1px;
+        margin-top: 14px;
+        background: #eeeeee;
+    }
+}
+
+.tabs-content {
+    margin-top: 20px;
+
+    font-family: SF Pro Display;
+    font-size: 14px;
+    line-height: 22px;
 }

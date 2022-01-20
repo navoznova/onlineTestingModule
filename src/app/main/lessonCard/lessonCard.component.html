@@ -1,7 +1,6 @@
 <div class="lesson-card">
     <div class="lesson-content">
         <app-author [model]='author'></app-author>
-
         <div class="lesson-details">
             <div class="lesson-img"></div>
             <div class="lesson-info">
@@ -9,11 +8,29 @@
                 <div class="title">{{ lessonTitle }}</div>
                 <div class="sub-title">{{ lessonSubTitle }}</div>
                 <div class="level">Medium</div>
+                <div class="buttons-row">
+                    <div class="tabs">
+                        <div class="tabsTitles">
+                            <ul>
+                                <li class="tab" *ngFor="let title of tabsTitles; index as i" (click)="setActiveTab(i);">
+                                    {{ title }}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <app-button [label]='buttonLabel'></app-button>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-content">
+            <div *ngFor="let content of tabsContents; index as j">
+                <div *ngIf="currentTabIndex === j">
+                    {{ content }}
+                </div>
             </div>
         </div>
 
-        <app-tabs [titles]='tabsTitles' [contents]='tabsContents'></app-tabs>
-        <app-button [label]='buttonLabel'></app-button>
         <app-statistics></app-statistics>
         <app-comments [lessonId]='lessonId'></app-comments>
     </div>

@@ -19,12 +19,9 @@ export class LessonCardComponent implements OnInit {
 
     tabsTitles: string[] = ["Об уроке", "Содержание", "Упражнения",]
     tabsContents: string[] = ["No content", "два2 контент", "Три три контент",]
+    currentTabIndex: number = 0;
 
     constructor(private http: HttpClient) { }
-
-    doSomething() {
-        console.log("click");
-    }
 
     ngOnInit(): void {
         const getLessonUrl: string = 'https://b.onclass.tech/web/content/slug/Vx2YUK5pg2d0?full=1';
@@ -50,6 +47,10 @@ export class LessonCardComponent implements OnInit {
                 this.author = new AuthorViewModel(authorFirstName, authorLastName, authorUserPicUrl, publishedAt);
             });
     }
+
+    setActiveTab(index: number){
+		this.currentTabIndex = index;
+	}
 }
 
 class LessonResponseModel {
