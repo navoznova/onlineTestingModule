@@ -1,7 +1,17 @@
 <div class="lesson-card">
     <div class="lesson-content">
         <app-author [model]='author'></app-author>
-        <app-head [title]="lessonTitle" [subTitle]='lessonSubTitle'></app-head>
+
+        <div class="lesson-details">
+            <div class="lesson-img"></div>
+            <div class="lesson-info">
+                <div class="lesson-type">Lesson</div>
+                <div class="title">{{ lessonTitle }}</div>
+                <div class="sub-title">{{ lessonSubTitle }}</div>
+                <div class="level">Medium</div>
+            </div>
+        </div>
+
         <app-tabs [titles]='tabsTitles' [contents]='tabsContents'></app-tabs>
         <app-button [label]='buttonLabel'></app-button>
         <app-statistics></app-statistics>
