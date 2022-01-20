@@ -12,10 +12,12 @@ export class LessonCardComponent implements OnInit {
     lessonId: string = '';
 
     lessonTitle: string = '';
+    lessonSubTitle: string = '';
+
     buttonLabel: string = 'Начать урок';
     author!: AuthorViewModel;
 
-    tabsTitles: string[] = ["Один", "два2", "Три три",]
+    tabsTitles: string[] = ["Об уроке", "Содержание", "Упражнения",]
     tabsContents: string[] = ["No content", "два2 контент", "Три три контент",]
 
     constructor(private http: HttpClient) { }
@@ -30,11 +32,13 @@ export class LessonCardComponent implements OnInit {
             .subscribe(lesson => {
                 console.dir(lesson);
                 console.log(`title = ${lesson.title}`);
+                console.log(`sub_title = ${lesson.sub_title}`);
                 console.log(`first_name = ${lesson.author?.first_name}`);
                 console.log(`published_at = ${lesson.published_at}`);
 
                 this.lessonId = lesson.id || '';
                 this.lessonTitle = lesson.title || '';
+                this.lessonSubTitle = lesson.sub_title || '';
                 this.tabsContents[0] = lesson.description || '';
 
                 const authorFirstName = lesson.author?.first_name || '';
@@ -51,6 +55,7 @@ export class LessonCardComponent implements OnInit {
 class LessonResponseModel {
     id: string | undefined;
     title: string | undefined;
+    sub_title: string | undefined;
     description: string | undefined;
     author: AuthorResponseModel | undefined;
     published_at: Date | undefined;

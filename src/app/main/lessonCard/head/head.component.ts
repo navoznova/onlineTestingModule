@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-head',
@@ -6,12 +6,20 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./head.component.scss']
 })
 
-export class HeadComponent {
+export class HeadComponent implements OnInit{
     @Input() title: string = '';
+    @Input() sub_title: string = '';
+
+    tabsTitles: string[] = ["Об уроке", "Содержание", "Упражнения",]
+    tabsContents: string[] = ["No content", "два2 контент", "Три три контент",]
 
     constructor() { }
-
-    functioncall(event: any) {
-        console.log('functioncall', event);
+    
+    ngOnInit(): void {
+        throw new Error('Method not implemented.');
     }
+
+    /*functioncall(event: any) {
+        console.log('functioncall', event);
+    }*/
 }

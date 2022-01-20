@@ -2,6 +2,8 @@
     <div class="author-img">
         <img [attr.src]="model?.picUrl" alt="author avatar" />
     </div>
-    <div class="name">{{ model?.firstName }} {{ model?.lastName}}</div>
-    <div class="time">{{ formatToAmPmTime(model?.publishedAt) }}</div>
+    <div class="author-info">
+        <div class="name">{{ model?.firstName }} {{ model?.lastName}}</div>
+        <div class="time">{{ formatToAmPmTime(model?.publishedAt) }}</div>
+    </div>
 </div>

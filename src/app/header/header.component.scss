@@ -7,10 +7,6 @@
     z-index: 108;
     flex-wrap: wrap;
 
-    .row {
-        width: 100%;
-    }
-
     .content {
         align-items: center;
         display: flex;
@@ -32,25 +28,4 @@
     background: url("/assets/img/logo.svg") no-repeat;
     height: 45px;
     width: 45px;
-}
-
-.left-spacer {
-    flex: 1 1;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0%;
-}
-
-.nav {
-    display: flex;
-    margin: 0 20px;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-}
-
-.right-spacer[_ngcontent-lingo2-web-c246] {
-    display: flex;
-    flex: 1 1;
-    justify-content: flex-end;
 }

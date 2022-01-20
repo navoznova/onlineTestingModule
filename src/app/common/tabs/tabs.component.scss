@@ -1,0 +1,25 @@
+.tabs ul {
+    display: flex;
+}
+
+.tab {
+    padding: 0 20px;
+
+    font-family: SF Pro Display;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #41a1d9;
+}
+
+.line {
+    width: 340px;
+    height: 1px;
+    margin-top: 14px;
+    background: #eeeeee;
+}

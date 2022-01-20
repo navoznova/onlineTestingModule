@@ -1,0 +1,53 @@
+.lesson-details {
+    margin-top: 20px;
+    display: flex;
+}
+
+.lesson-img {
+    height: 190px;
+    margin-right: 20px;
+    position: relative;
+    width: 190px;
+
+    border: solid 1px #777777;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.lesson-info {
+    flex-direction: column;
+
+    font-family: SF Pro Display;
+
+    line-height: 100%;
+    align-items: center;
+
+    .lesson-type {
+        font-size: 18px;
+        margin-top: 20px;
+        color: #5ab3e4;
+    }
+
+    .title {
+        margin-top: 6px;
+        font-size: 24px;
+        line-height: 100%;
+
+        color: #1e252b;
+    }
+
+    .sub-title {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 22px;
+
+        color: #181c2f;
+    }
+
+    .level {
+        margin-top: 13px;
+        font-size: 12px;
+
+        color: #5f6d7a;
+    }
+}

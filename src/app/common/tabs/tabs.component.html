@@ -1,11 +1,12 @@
 <div class="tabs">
     <div class="tabsTitles">
         <ul>
-            <li *ngFor="let title of titles; index as i" (click)="setActiveTab(i);">
+            <li class="tab" *ngFor="let title of titles; index as i" (click)="setActiveTab(i);">
                 {{ title }}
             </li>
         </ul>
     </div>
+    <div class="line"></div>
     <div class="tabsContents">
         <div *ngFor="let content of contents; index as j">
             <div *ngIf="currentTabIndex === j">
