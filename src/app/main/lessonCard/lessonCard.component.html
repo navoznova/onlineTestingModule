@@ -1,7 +1,7 @@
 <div class="lesson-card">
     <div class="lesson-content">
         <app-author [model]='author'></app-author>
-        <app-head [title]="lessonTitle"></app-head>
+        <app-head [title]="lessonTitle" [subTitle]='lessonSubTitle'></app-head>
         <app-tabs [titles]='tabsTitles' [contents]='tabsContents'></app-tabs>
         <app-button [label]='buttonLabel'></app-button>
         <app-statistics></app-statistics>

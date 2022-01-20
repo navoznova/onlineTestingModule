@@ -8,13 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class HeadComponent implements OnInit{
     @Input() title: string = '';
-    @Input() sub_title: string = '';
-
-    tabsTitles: string[] = ["Об уроке", "Содержание", "Упражнения",]
-    tabsContents: string[] = ["No content", "два2 контент", "Три три контент",]
+    @Input() subTitle: string = 'test';
 
     constructor() { }
-    
+
     ngOnInit(): void {
         throw new Error('Method not implemented.');
     }
