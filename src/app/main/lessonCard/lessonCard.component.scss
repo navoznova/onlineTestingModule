@@ -72,6 +72,7 @@
 
     .tabs ul {
         display: flex;
+        width: 340px;
     }
 
     .tab {
@@ -92,7 +93,6 @@
     }
 
     .line {
-        width: 340px;
         height: 1px;
         margin-top: 14px;
         background: #eeeeee;
