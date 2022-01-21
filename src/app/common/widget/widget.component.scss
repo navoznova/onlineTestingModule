@@ -1,24 +1,28 @@
-.likes-widget{
+.statistic-parameter{
     display: flex;
-}
+    margin-right: 8px;
 
-.comments-widget{
-    display: flex;
+    .icon {
+        background-size: cover;
+        width: 22px;
+        height: 20px;
+        margin-right: 8px;
 
-}
-.shares-widget{
-    display: flex;
+        .likes-widget{
+            background: url("/assets/img/likes.svg") no-repeat;
+        }
+        .comments-widget{
+            background: url("/assets/img/comments.svg") no-repeat;
+        }
+        .shares-widget{
+            background: url("/assets/img/share.svg") no-repeat;
+        }
+        .rating-widget{
+            background: url("/assets/img/rating.svg") no-repeat;
+        }
+        .views-widget{
+            background: url("/assets/img/views.svg") no-repeat;
+        }
 
-}
-.shared-widget{
-    display: flex;
-
-}
-.rating-widget{
-    display: flex;
-
-}
-.views-widget{
-    display: flex;
-
+    }     
 }

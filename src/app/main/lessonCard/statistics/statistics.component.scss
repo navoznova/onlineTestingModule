@@ -1,4 +1,21 @@
-.statistics{
+.statistics {
+    height: 58px;
+    margin-top: 20px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    box-sizing: border-box;
+
+    .left-side{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .rigth-side{
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
