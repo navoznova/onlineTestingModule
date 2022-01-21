@@ -1,17 +1,17 @@
-<div>Comments</div>
 <div class="existing-comments">
-    <div *ngFor="let comment of comments">
+    <div class="comment-text" *ngFor="let comment of comments">
         {{ comment.content }}
     </div>
 </div>
 <div class="load-next-comments">
-    <span>Показать следующие комментарии</span>
+    <span class="text">Показать следующие комментарии</span>
 </div>
-<div>
-    <div>
+<div class="comment-section">
+    <div class='comment-block'>
+        <div class="attachment"></div>
         <input [(ngModel)]="newComment" type="text" placeholder="Написать комментарий" />
     </div>
     <div>
-        <button class="send-comment" (click)="addComment()">Отправить</button>
+        <button class="send-comment" (click)="addComment()"></button>
     </div>
 </div>
