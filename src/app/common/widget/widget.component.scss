@@ -1,28 +1,43 @@
-.statistic-parameter{
+.statistic-parameter {
     display: flex;
     margin-right: 8px;
 
     .icon {
         background-size: cover;
-        width: 22px;
-        height: 20px;
         margin-right: 8px;
 
-        .likes-widget{
+        .likes-widget {
             background: url("/assets/img/likes.svg") no-repeat;
+            width: 22px;
+            height: 20px;
         }
-        .comments-widget{
+        .comments-widget {
             background: url("/assets/img/comments.svg") no-repeat;
+            width: 22px;
+            height: 20px;
         }
-        .shares-widget{
+        .shares-widget {
             background: url("/assets/img/share.svg") no-repeat;
+            width: 22px;
+            height: 20px;
         }
-        .rating-widget{
+        .rating-widget {
             background: url("/assets/img/rating.svg") no-repeat;
+            width: 22px;
+            height: 20px;
         }
-        .views-widget{
-            background: url("/assets/img/views.svg") no-repeat;
+        .views-widget {
+            background: url("/assets/img/view.svg") no-repeat;
+            width: 22px;
+            height: 20px;
         }
+    }
 
-    }     
+    .number {
+        font-family: SF Pro Display;
+        font-size: 14px;
+        line-height: 22px;
+
+        color: #a9adb7;
+    }
 }

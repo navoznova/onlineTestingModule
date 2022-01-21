@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class WidgetComponent {
 	@Input()
-	public count!: number;
+	public count: number | undefined;
 
 	@Input()
 	public widgetType!: WidgetType;
