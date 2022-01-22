@@ -18,7 +18,7 @@ export class LessonCardComponent implements OnInit {
     author!: AuthorViewModel;
 
     tabsTitles: string[] = ["Об уроке", "Содержание", "Упражнения",]
-    tabsContents: string[] = ["No content", "два2 контент", "Три три контент",]
+    tabsContents: string[] = ["No content", "lorem ipsum", "lorem ipsum",]
     currentTabIndex: number = 0;
 
     comments: number = 1;

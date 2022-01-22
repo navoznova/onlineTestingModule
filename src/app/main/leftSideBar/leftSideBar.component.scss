@@ -1,6 +1,15 @@
 .left-sidebar{
-    background: #71d176;
     display: flex;
     justify-content: space-start;
     width: 225px;
+    height: 100%;
+    
+    background: #F7F7F7;
+    box-shadow: 4px 0px 4px rgba(204, 204, 204, 0.25);
+}
+
+@media (max-width: 1200px) {
+    .left-sidebar {
+        display: none;
+    }
 }

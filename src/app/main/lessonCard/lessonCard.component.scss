@@ -1,4 +1,5 @@
 .lesson-card {
+    margin: 34px;
     width: 800px;
 
     background: #ffffff;
@@ -12,6 +13,11 @@
     margin: 30px;
 }
 
+.author{
+    display: flex;
+    justify-content: space-between;
+}
+
 .lesson-details {
     margin-top: 20px;
     display: flex;
@@ -23,7 +29,7 @@
     position: relative;
     width: 190px;
 
-    border: solid 1px #777777;
+    border: solid 1px #EEEEEE;
     border-radius: 10px;
     box-sizing: border-box;
 }
@@ -70,7 +76,7 @@
 
     .tabs ul {
         display: flex;
-        margin-top: 28px;
+        margin-top: 15px;
         margin-left: 18px;
         padding: 0;
 
@@ -78,7 +84,7 @@
     }
 
     .tab {
-        height: 28px;
+        height: 40px;
 
         padding-left: 20px;
         padding-right: 20px;
@@ -104,12 +110,12 @@
 }
 
 .tabs-content {
-    margin-top: 21px;
+    margin-top: 4px;
     font-size: 14px;
     line-height: 22px;
 }
 
 .action-start {
     margin-top: 13px;
-    margin-left: 26px;
+    margin-left: 34px;
 }
