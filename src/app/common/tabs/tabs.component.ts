@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
 	selector: 'app-tabs',
@@ -13,11 +13,13 @@ export class TabsComponent {
 	public contents: string[] = [];
 
 	currentTabIndex: number = 0;
+	public activeItem: number | undefined;
 
 	constructor() { }
 
 	setActiveTab(index: number){
 		this.currentTabIndex = index;
+		this.activeItem = index;
 	}
 }
 

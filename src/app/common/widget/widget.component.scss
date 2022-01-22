@@ -1,12 +1,16 @@
 .statistic-parameter {
     display: flex;
-    margin-right: 30px;
+    margin-right: 34px;
+
+    align-items: center;
 
     .icon {
         background-size: cover;
         margin-right: 8px;
 
         .likes-widget {
+            margin-left: 20px;
+
             background: url("/assets/img/likes.svg") no-repeat;
             width: 22px;
             height: 20px;
@@ -25,11 +29,14 @@
             background: url("/assets/img/rating.svg") no-repeat;
             width: 22px;
             height: 20px;
+            color: #E7D878;
         }
         .views-widget {
             background: url("/assets/img/view.svg") no-repeat;
             width: 22px;
             height: 20px;
+            color: #5AB3E4;
+
         }
     }
 

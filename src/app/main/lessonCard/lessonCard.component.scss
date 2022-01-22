@@ -78,6 +78,8 @@
     }
 
     .tab {
+        height: 28px;
+
         padding-left: 20px;
         padding-right: 20px;
 
@@ -89,17 +91,15 @@
         text-align: center;
 
         cursor: pointer;
+
+        border-bottom: 1px solid #EEEEEE;
         color: #5f6d7a;
     }
 
-    .line {
-        margin-left: 28px;
-        margin-top: -2px;
+    .tab.active {
+        border-bottom: 2px solid #5ab3e4;
+        color: #41A1D9c7;
 
-        height: 1px;
-        width: 340px;
-
-        background: #eeeeee;
     }
 }
 

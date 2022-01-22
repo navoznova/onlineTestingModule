@@ -1,7 +1,7 @@
 <div class="tabs">
     <div class="tabsTitles">
         <ul>
-            <li class="tab" *ngFor="let title of titles; index as i" (click)="setActiveTab(i);">
+            <li *ngFor="let title of titles; index as i" [class.active]="i == activeItem" (click)="setActiveTab(i);">
                 {{ title }}
             </li>
         </ul>

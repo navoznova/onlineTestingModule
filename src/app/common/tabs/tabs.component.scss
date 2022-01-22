@@ -2,19 +2,23 @@
     display: flex;
 }
 
-.tab {
+li {
     padding: 0 20px;
-
     font-size: 14px;
     line-height: 100%;
-    /* or 14px */
 
     display: flex;
     align-items: center;
     text-align: center;
-
     color: #41a1d9;
+
+    
 }
+li.active {
+    border-bottom: 2px solid #dd0b0b;
+}
+
+
 
 .line {
     width: 340px;
