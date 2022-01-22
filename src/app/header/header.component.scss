@@ -1,27 +1,23 @@
 .header {
-    background: #5ab3e4;
     position: absolute;
     top: 0;
     left: 0;
+    
     width: 100%;
-    z-index: 108;
-    flex-wrap: wrap;
+    
+    background: #5ab3e4;
+    box-shadow: 0px 4px 4px rgba(204, 204, 204, 0.5);
+}
 
-    .content {
-        align-items: center;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        height: 80px;
-    }
+.content {
+    align-items: center;
+    display: flex;
+    height: 80px;
 }
 
 .brand {
     display: flex;
-    align-items: center;
-    height: 45px;
     margin-left: 30px;
-    margin-right: 20px;
 }
 
 .logo {
