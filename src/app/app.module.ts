@@ -8,7 +8,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
 import { MainComponent } from './main/main.component';
 import { LessonCardComponent } from './main/lessonCard/lessonCard.component';
 import { LessonCardModule } from './main/lessonCard/lessonCard.module';
@@ -19,7 +18,6 @@ import { TabsComponent } from './common/tabs/tabs.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
     HeaderComponent,
     FooterComponent,
     LeftSideBarComponent,
