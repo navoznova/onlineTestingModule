@@ -16,7 +16,7 @@ export class LessonCardComponent implements OnInit {
 
     // author
     author!: AuthorViewModel;
-    publishedAt!:Date;
+    publishedAt:Date | undefined;
 
     // tabs
     tabsTitles: string[] = ["Об уроке", "Содержание", "Упражнения",]
@@ -53,8 +53,7 @@ export class LessonCardComponent implements OnInit {
                 this.likes = lesson.stats?.likes_count || 0;
                 this.views = lesson.stats?.views_count || 0;
 
-                // хак с датой, чтобы был нормальный объект
-                this.publishedAt = new Date(lesson.published_at || new Date());
+                this.publishedAt = lesson.published_at;
           
                 const authorFirstName = lesson.author?.first_name || '';
                 const authorLastName = lesson.author?.last_name || '';

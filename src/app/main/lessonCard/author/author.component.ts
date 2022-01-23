@@ -10,11 +10,14 @@ export class AuthorComponent {
 	author!: AuthorViewModel;
 	
 	@Input()
-	publishedAt!: Date;
+	publishedAt: Date | undefined;
 
 	formatToAmPmTime(date: Date | undefined) {
-		return date?.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
-	}
+		// хак с датой, чтобы был нормальный объект
+		return date
+			? new Date(date).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+			: undefined;	
+		}
 }
 
 export class AuthorViewModel {

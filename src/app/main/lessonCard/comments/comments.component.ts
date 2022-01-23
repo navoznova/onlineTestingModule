@@ -32,15 +32,24 @@ export class CommentsComponent implements OnInit {
 		});
 	}
 
-	mapComment(comment: CommentResponseModel) : CommentViewModel{
-		return new CommentViewModel(comment.id, comment.text, 
-			this.mapAuthor(comment.author), comment.published_at)
+	mapComment(comment: CommentResponseModel): CommentViewModel {
+		const author = this.mapAuthor(comment.author);
+		const publishedAt = comment.published_at ? new Date(comment.published_at) : undefined;
+		return new CommentViewModel(comment.id, comment.text, author, publishedAt)
 	}
-	private mapAuthor(author: AuthorResponseModel): AuthorViewModel {
+
+	mapAuthor(author: AuthorResponseModel): AuthorViewModel {
 		const firstName = author.first_name || '';
 		const lastName = author.last_name || '';
 		const picUrl = author.userpic?.smX2?.url || '';
 		return new AuthorViewModel(firstName, lastName, picUrl);
+	}
+
+	public formatToAmPmTime(date: Date | undefined) {
+		// хак с датой, чтобы был нормальный объект
+		return date
+			? new Date(date).toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+			: undefined;
 	}
 
 	public addComment() {
@@ -58,16 +67,16 @@ class CommentsResponseModel {
 }
 
 class CommentResponseModel {
-	id: string = '';
-	text: string = '';
-	author_id: string = '';
+	id!: string;
+	text!: string;
+	author_id!: string;
 	author!: AuthorResponseModel;
 	published_at!: Date;
 }
 
 class CommentViewModel {
 	constructor(public id: string, public content: string,
-		public author: AuthorViewModel, public publishedAt: Date) { }
+		public author: AuthorViewModel, public publishedAt: Date | undefined) { }
 }
 
 class AuthorResponseModel {
