@@ -3,16 +3,27 @@
     justify-content: left;
 
     height: 79px;
-        align-items: center;
-        border-bottom: 1px solid #eeeeee;
-        box-sizing: border-box;
-    
-    font-style: normal;
-    font-weight: normal;
+    align-items: center;
+
+    border-bottom: 1px solid #eeeeee;
+    box-sizing: border-box;
+
     font-size: 14px;
     line-height: 100%;
 
+    .name {
+        color: #0c6495;
+    }
+
+    .time {
+        margin-top: 4px;
+        color: #999999;
+    }
+
     .comment-text {
+        margin-top: 7px;
+        font-style: normal;
+        font-weight: normal;
     }
 
     .author-img img {
@@ -22,7 +33,6 @@
         height: 40px;
 
         border-radius: 50%;
-
     }
 }
 
