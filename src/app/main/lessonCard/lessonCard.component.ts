@@ -14,8 +14,6 @@ export class LessonCardComponent implements OnInit {
     lessonTitle: string = '';
     lessonSubTitle: string = '';
 
-    buttonLabel: string = 'Начать урок';
-
     author!: AuthorViewModel;
     publishedAt!:Date;
 
