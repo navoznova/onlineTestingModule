@@ -13,7 +13,7 @@ export class CommentsComponent implements OnInit {
 	lessonId: string = '';
 
 	comments: CommentViewModel[] = [];
-	newComment: string = '';
+	newCommentText: string = '';
 
 	constructor(private http: HttpClient) { }
 
@@ -54,11 +54,13 @@ export class CommentsComponent implements OnInit {
 
 	public addComment() {
 		// хардкод. тут надо отправлять запрос на сервер для сохранения нового комментария. а в ответ получать идентификатор этого комментаря.
-		// const commentId = "";
+		const commentId = "";
 
-		// let comment = new CommentViewModel(commentId, this.newComment, new AuthorViewModel("", "", '', new Date()));
-		// this.comments.push(comment);
-		// this.newComment = '';
+		// хардкод автора, чтобы хоть что-нибудь отобразить
+		const author = new AuthorViewModel("this is", "ME", "");
+		let comment = new CommentViewModel(commentId, this.newCommentText, author, new Date());
+		this.comments.push(comment);
+		this.newCommentText = '';
 	}
 }
 
