@@ -27,13 +27,20 @@ export class CommentsComponent implements OnInit {
 		this.http.get<CommentsResponseModel>(getcommentsUrl).subscribe(response => {
 			console.log(response);
 			console.log(`text = ${response.first?.[0]?.text}`);
-			
-			this.comments = response.first?.map(comment => new CommentViewModel(comment.id, comment.text, this.mapAuthor(comment.author))) || [];
+
+			this.comments = response.first?.map(comment => this.mapComment(comment)) || [];
 		});
 	}
 
+	mapComment(comment: CommentResponseModel) : CommentViewModel{
+		return new CommentViewModel(comment.id, comment.text, 
+			this.mapAuthor(comment.author), comment.published_at)
+	}
 	private mapAuthor(author: AuthorResponseModel): AuthorViewModel {
-		return new AuthorViewModel(author.first_name || '', author.last_name || '', author.userpic?.smX2?.url || '');
+		const firstName = author.first_name || '';
+		const lastName = author.last_name || '';
+		const picUrl = author.userpic?.smX2?.url || '';
+		return new AuthorViewModel(firstName, lastName, picUrl);
 	}
 
 	public addComment() {
@@ -55,22 +62,24 @@ class CommentResponseModel {
 	text: string = '';
 	author_id: string = '';
 	author!: AuthorResponseModel;
+	published_at!: Date;
 }
 
 class CommentViewModel {
-	constructor(public id: string, public content: string, public author: AuthorViewModel) { }
+	constructor(public id: string, public content: string,
+		public author: AuthorViewModel, public publishedAt: Date) { }
 }
 
 class AuthorResponseModel {
-    first_name: string | undefined;
-    last_name: string | undefined;
-    userpic: UserpicResponseModel | undefined;
+	first_name: string | undefined;
+	last_name: string | undefined;
+	userpic: UserpicResponseModel | undefined;
 }
 
 class UserpicResponseModel {
-    smX2: SmResponseModel | undefined;
+	smX2: SmResponseModel | undefined;
 }
 
 class SmResponseModel {
-    url: string | undefined;
+	url: string | undefined;
 }

@@ -72,24 +72,24 @@ class LessonResponseModel {
     description: string | undefined;
     author: AuthorResponseModel | undefined;
     published_at: Date | undefined;
-    stats: Stats | undefined;
+    stats: StatisticsResponseModel | undefined;
 }
 
-export class AuthorResponseModel {
+class AuthorResponseModel {
     first_name: string | undefined;
     last_name: string | undefined;
     userpic: UserpicResponseModel | undefined;
 }
 
-export class UserpicResponseModel {
+class UserpicResponseModel {
     smX2: SmResponseModel | undefined;
 }
 
-export class SmResponseModel {
+class SmResponseModel {
     url: string | undefined;
 }
 
-class Stats {
+class StatisticsResponseModel {
     comments_count: number | undefined;
     rating: number | undefined;
     shares_count: number | undefined;
