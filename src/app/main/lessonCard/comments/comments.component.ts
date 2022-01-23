@@ -52,7 +52,7 @@ export class CommentsComponent implements OnInit {
 			: undefined;
 	}
 
-	public addComment() {
+	public addComment(): void {
 		// хардкод. тут надо отправлять запрос на сервер для сохранения нового комментария. а в ответ получать идентификатор этого комментаря.
 		const commentId = "";
 
@@ -61,6 +61,10 @@ export class CommentsComponent implements OnInit {
 		let comment = new CommentViewModel(commentId, this.newCommentText, author, new Date());
 		this.comments.push(comment);
 		this.newCommentText = '';
+	}
+
+	public loadMoreComments(): void {
+		console.log("Как бы загружаем новые комментарии...");
 	}
 }
 
