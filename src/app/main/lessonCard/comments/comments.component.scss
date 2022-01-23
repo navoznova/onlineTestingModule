@@ -1,16 +1,28 @@
-.existing-comments {
+.existing-comment {
+    display: flex;
+    justify-content: left;
+
+    height: 79px;
+        align-items: center;
+        border-bottom: 1px solid #eeeeee;
+        box-sizing: border-box;
+    
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 100%;
 
     .comment-text {
-        height: 79px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #eeeeee;
-        box-sizing: border-box;
+    }
+
+    .author-img img {
+        margin-right: 10px;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+
     }
 }
 
@@ -30,7 +42,7 @@
     }
 }
 
-.comment-section {
+.new-comment-section {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,12 +1,21 @@
-<div class="existing-comments">
-    <div class="comment-text" *ngFor="let comment of comments">
-        {{ comment.content }}
+<div>
+    <div class="existing-comment" *ngFor="let comment of comments">
+        <div class="author-img">
+            <img alt="author avatar" />
+        </div>
+        <div class="author-info">
+            <div class="name">{{ comment.author?.firstName }} {{ comment.author?.lastName }}</div>
+            <div class="comment-text">
+                {{ comment.content }}
+            </div>
+            <div class="time">comment.author?.publishedAt</div>
+        </div>
     </div>
 </div>
 <div class="load-next-comments">
     <span class="text">Показать следующие комментарии</span>
 </div>
-<div class="comment-section">
+<div class="new-comment-section">
     <div class='comment-block'>
         <div class="attachment"></div>
         <input [(ngModel)]="newComment" type="text" placeholder="Написать комментарий" />

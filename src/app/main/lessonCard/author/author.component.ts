@@ -7,7 +7,10 @@ import { Component, Input } from "@angular/core";
 })
 export class AuthorComponent {
 	@Input()
-	model!: AuthorViewModel;
+	author!: AuthorViewModel;
+	
+	@Input()
+	publishedAt!: Date;
 
 	formatToAmPmTime(date: Date | undefined) {
 		return date?.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
@@ -16,5 +19,5 @@ export class AuthorComponent {
 
 export class AuthorViewModel {
 	constructor(public firstName: string, public lastName: string,
-		public picUrl: string, public publishedAt: Date) { }
+		public picUrl: string, ) { }
 }

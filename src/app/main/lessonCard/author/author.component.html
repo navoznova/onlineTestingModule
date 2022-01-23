@@ -1,10 +1,10 @@
 <div class="author">
     <div class="author-img">
-        <img [attr.src]="model?.picUrl" alt="author avatar" />
+        <img [attr.src]="author?.picUrl" alt="author avatar" />
     </div>
     <div class="author-info">
-        <div class="name">{{ model?.firstName }} {{ model?.lastName}}</div>
-        <div class="time">{{ formatToAmPmTime(model?.publishedAt) }}</div>
+        <div class="name">{{ author?.firstName }} {{ author?.lastName}}</div>
+        <div class="time">{{ formatToAmPmTime(publishedAt) }}</div>
     </div>
 </div>
 <div class="book-mark">

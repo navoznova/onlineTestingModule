@@ -15,21 +15,23 @@ export class LessonCardComponent implements OnInit {
     lessonSubTitle: string = '';
 
     buttonLabel: string = 'Начать урок';
+
     author!: AuthorViewModel;
+    publishedAt!:Date;
 
     tabsTitles: string[] = ["Об уроке", "Содержание", "Упражнения",]
     tabsContents: string[] = ["No content", "lorem ipsum", "lorem ipsum",]
     currentTabIndex: number = 0;
 
-    comments: number = 1;
-    rating: number = 1;
-    shares: number = 1;
-    likes: number = 1;
-    views: number = 1;
+    comments!: number;
+    rating!: number;
+    shares!: number;
+    likes!: number;
+    views!: number;
 
     constructor(private http: HttpClient) { }
 
-    ngOnInit(): void {
+    ngOnInit() : void {
         const getLessonUrl: string = 'https://b.onclass.tech/web/content/slug/Vx2YUK5pg2d0?full=1';
         this.http.get<LessonResponseModel>(getLessonUrl)
             .subscribe(lesson => {
@@ -38,26 +40,25 @@ export class LessonCardComponent implements OnInit {
                 console.log(`sub_title = ${lesson.sub_title}`);
                 console.log(`first_name = ${lesson.author?.first_name}`);
                 console.log(`published_at = ${lesson.published_at}`);
-                console.log(`published_at = ${lesson.published_at}`);
 
                 this.lessonId = lesson.id || '';
                 this.lessonTitle = lesson.title || '';
                 this.lessonSubTitle = lesson.sub_title || '';
                 this.tabsContents[0] = lesson.description || '';
 
-                this.comments = lesson.stats?.comments_count || 1;
-                this.rating = lesson.stats?.rating || 1;
-                this.shares = lesson.stats?.shares_count || 1;
-                this.likes = lesson.stats?.likes_count || 1;
-                this.views = lesson.stats?.views_count || 1;
+                this.comments = lesson.stats?.comments_count || 0;
+                this.rating = lesson.stats?.rating || 0;
+                this.shares = lesson.stats?.shares_count || 0;
+                this.likes = lesson.stats?.likes_count || 0;
+                this.views = lesson.stats?.views_count || 0;
 
+                // хак с датой, чтобы был нормальный объект
+                this.publishedAt = new Date(lesson.published_at || new Date());
+          
                 const authorFirstName = lesson.author?.first_name || '';
                 const authorLastName = lesson.author?.last_name || '';
                 const authorUserPicUrl = lesson.author?.userpic?.smX2?.url || '';
-                // хак с датой, чтобы был нормальный объект
-                const publishedAt = new Date(lesson.published_at || new Date());
-
-                this.author = new AuthorViewModel(authorFirstName, authorLastName, authorUserPicUrl, publishedAt);
+                this.author = new AuthorViewModel(authorFirstName, authorLastName, authorUserPicUrl);
             });
     }
 
@@ -76,17 +77,17 @@ class LessonResponseModel {
     stats: Stats | undefined;
 }
 
-class AuthorResponseModel {
+export class AuthorResponseModel {
     first_name: string | undefined;
     last_name: string | undefined;
     userpic: UserpicResponseModel | undefined;
 }
 
-class UserpicResponseModel {
+export class UserpicResponseModel {
     smX2: SmResponseModel | undefined;
 }
 
-class SmResponseModel {
+export class SmResponseModel {
     url: string | undefined;
 }
 
@@ -97,6 +98,4 @@ class Stats {
     likes_count: number | undefined;
     dislikes_count: number | undefined;
     views_count: number | undefined;
-
 }
-
