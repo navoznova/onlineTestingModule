@@ -9,18 +9,21 @@ import { AuthorViewModel } from "./author/author.component";
 })
 
 export class LessonCardComponent implements OnInit {
+    // lesson
     lessonId: string = '';
-
     lessonTitle: string = '';
     lessonSubTitle: string = '';
 
+    // author
     author!: AuthorViewModel;
     publishedAt!:Date;
 
+    // tabs
     tabsTitles: string[] = ["Об уроке", "Содержание", "Упражнения",]
     tabsContents: string[] = ["No content", "lorem ipsum", "lorem ipsum",]
     currentTabIndex: number = 0;
 
+    // statistics
     comments!: number;
     rating!: number;
     shares!: number;
