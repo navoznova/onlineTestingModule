@@ -27,8 +27,7 @@
         </div>
         <div class="tabs-content">
             <div *ngFor="let content of tabsContents; index as j">
-                <div *ngIf="currentTabIndex === j">
-                    {{ content }}
+                <div *ngIf="currentTabIndex === j" [innerHTML]="content">
                 </div>
             </div>
         </div>

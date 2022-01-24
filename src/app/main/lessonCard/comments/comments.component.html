@@ -5,8 +5,7 @@
         </div>
         <div class="author-info">
             <div class="name">{{ comment.author?.firstName }} {{ comment.author?.lastName }}</div>
-            <div class="comment-text">
-                {{ comment.content }}
+            <div class="comment-text" [innerHTML]="comment.content">
             </div>
             <div class="time">{{ formatToAmPmTime(comment.publishedAt) }}</div>
         </div>
