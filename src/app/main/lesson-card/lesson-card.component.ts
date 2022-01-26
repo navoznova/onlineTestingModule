@@ -4,8 +4,8 @@ import { AuthorViewModel } from "./author/author.component";
 
 @Component({
     selector: 'app-lesson-card',
-    templateUrl: './lessonCard.component.html',
-    styleUrls: ['./lessonCard.component.scss']
+    templateUrl: './lesson-card.component.html',
+    styleUrls: ['./lesson-card.component.scss']
 })
 
 export class LessonCardComponent implements OnInit {
